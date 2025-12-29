@@ -64,12 +64,12 @@
 }
 
 .experience-meta .title {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 600;
 }
 
 .experience-meta .company {
-  font-size: 14px;
+  font-size: 16px;
   opacity: 0.7;
   letter-spacing: 0.08em;
   text-transform: uppercase;

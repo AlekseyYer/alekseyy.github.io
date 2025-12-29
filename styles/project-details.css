@@ -1,0 +1,71 @@
+/* ===== Project Detail Page ===== */
+
+.project-meta {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 32px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meta-label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.meta-value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Hero video */
+.project-hero {
+  max-width: 1800px;
+  margin: 80px auto;
+  padding: 0 32px;
+}
+
+.project-hero video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Description */
+.project-description {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 32px;
+}
+
+.project-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Gallery */
+.project-gallery {
+  max-width: 1600px;
+  margin: 120px auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.project-gallery video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
