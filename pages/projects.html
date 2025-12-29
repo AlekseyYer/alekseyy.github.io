@@ -7,6 +7,7 @@
 </head>
 <body>
    <div class="cursor-light"></div>
+   <div class="noise-overlay"></div>
   <!-- Navbar -->
   <header class="navbar">
     <div class="nav-inner">
@@ -15,7 +16,7 @@
       <nav class="nav-links">
         <a href="/pages/index.html">Experience</a>
         <a href="/pages/projects.html">Projects</a>
-        <a href="/#about">About</a>
+        <a href="/pages/about.html">About</a>
         <a href="/AlekseyY_Resume.pdf" target="_blank" class="resume">Resume</a>
       </nav>
     </div>
@@ -29,7 +30,7 @@
       <div class="project-card">
         <video
           src="/gifs/Changeling.mp4"
-          poster = "/pldresize.jpg"
+          poster = "/posters/pldresize.jpg"
           muted
           playsinline
           preload="none"
@@ -52,13 +53,36 @@
         <div class = "project-title-static"> PROJECT SNet
         </div>
         <div class="project-overlay">
-          <button class="view-btn">View</button>
+          <a href="/pages/project-snet.html"  class="view-btn">View</a>
         </div>
       </div>
 
       <!-- Add more project-card blocks -->
     </div>
   </section>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+
+    <nav class="footer-links">
+      <a href="/pages/index.html">Experience</a>
+      <a href="/pages/projects.html">Projects</a>
+      <a href="/pages/about.html">About</a>
+    </nav>
+
+    <div class="footer-social">
+      <a
+        href="https://www.linkedin.com/in/alekseyyer/"
+        target="_blank"
+        aria-label="LinkedIn"
+        class="social-btn"
+      >
+        in
+      </a>
+    </div>
+
+  </div>
+</footer>
 
   <!-- Hover play logic -->
   <script>

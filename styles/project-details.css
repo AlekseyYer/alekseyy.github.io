@@ -5,7 +5,7 @@
   margin: 0 auto;
   padding: 60px 32px 0px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .meta-item {
@@ -64,6 +64,13 @@
 }
 
 .project-gallery video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+.project-gallery img {
   width: 100%;
   border-radius: 12px;
   display: block;

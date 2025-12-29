@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Third Pie Studios – Experience</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+  <div class="cursor-light"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="logo">Aleksey Yereshchenko</div>
+
+      <nav class="nav-links">
+        <a href="/pages/index.html">Experience</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/AlekseyY_Resume.pdf" target="_blank" class="resume">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Meta -->
+  <section class="project-meta">
+    <div class="meta-item">
+      <span class="meta-label">Role</span>
+      <span class="meta-value">Gameplay Programmer (Contract)</span>
+    </div>
+
+    <div class="meta-item">
+    <span class="meta-label">Company</span>
+    <span class="meta-value">Third Pie Studios</span>
+    </div>
+    
+    <div class="meta-item">
+      <span class="meta-label">Timeline</span>
+      <span class="meta-value">2023 – 2024</span>
+    </div>
+  </section>
+
+  <!-- Hero video -->
+  <section class="project-hero">
+    <video
+      src="/gifs/Cataria.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
+  </section>
+
+  <!-- Description -->
+  <section class="project-description">
+    <p>
+      At Third Pie Studios, I worked as a contract gameplay programmer,
+      contributing to core gameplay systems, prototyping mechanics,
+      and supporting production needs across multiple features.
+      My focus was on responsiveness, performance, and clean
+      implementation that could scale with the project.
+    </p>
+  </section>
+
+  <!-- Gallery -->
+  <section class="project-gallery">
+    <video src="/gifs/Cataria.mp4" autoplay loop muted playsinline></video>
+    <video src="/gifs/Cataria.mp4" autoplay loop muted playsinline></video>
+    <video src="/gifs/Cataria.mp4" autoplay loop muted playsinline></video>
+    <video src="/gifs/Cataria.mp4" autoplay loop muted playsinline></video>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-links">
+        <a href="/pages/index.html">Experience</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/about.html">About</a>
+      </nav>
+
+      <div class="footer-social">
+        <a
+          href="https://www.linkedin.com/in/alekseyyer/"
+          target="_blank"
+          class="social-btn"
+        >
+          in
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const light = document.querySelector('.cursor-light');
+    window.addEventListener('mousemove', (e) => {
+      light.style.setProperty('--x', e.clientX + 'px');
+      light.style.setProperty('--y', e.clientY + 'px');
+    });
+  </script>
+
+</body>
+</html>

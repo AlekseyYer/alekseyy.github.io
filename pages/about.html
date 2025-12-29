@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+  <!-- Background layers -->
+  <div class="cursor-light"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="logo">Aleksey Yereshchenko</div>
+
+      <nav class="nav-links">
+        <a href="/pages/index.html">Experience</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/AlekseyY_Resume.pdf" target="_blank" class="resume">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about">
+    <h1 class="outline-heading">About</h1>
+
+    <div class="about-content">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad impedit nesciunt beatae quas explicabo eius ipsam, sed voluptate iste, soluta distinctio optio temporibus eveniet nihil, qui repellat velit reiciendis dolorem!
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, vel tenetur. Perferendis, sit nemo. Quae nisi vero impedit, pariatur ad molestiae dolorum in quisquam id, et, neque odit ipsa dolore!
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, velit in aperiam quod autem quia at deleniti nulla qui dolorum natus commodi earum ipsam debitis mollitia esse culpa nisi. Quis?
+      </p>
+    </div>
+
+    <div class="about-signature">
+      <img src="/alekseyy-min.jpg" alt="Portrait" />
+      <div class="signature-text">
+        <span class="name">Aleksey Yereshchenko</span>
+        <span class="role">Gameplay Programmer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-links">
+        <a href="/pages/index.html">Experience</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/about.html">About</a>
+      </nav>
+
+      <div class="footer-social">
+        <a
+          href="https://www.linkedin.com/in/alekseyyer/"
+          target="_blank"
+          class="social-btn"
+          aria-label="LinkedIn"
+        >
+          in
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cursor glow JS -->
+  <script>
+    const light = document.querySelector('.cursor-light');
+    window.addEventListener('mousemove', (e) => {
+      light.style.setProperty('--x', e.clientX + 'px');
+      light.style.setProperty('--y', e.clientY + 'px');
+    });
+  </script>
+
+</body>
+</html>
