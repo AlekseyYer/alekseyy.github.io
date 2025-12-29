@@ -1,0 +1,369 @@
+/* Reset / base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.cursor-light {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background: radial-gradient(
+    600px at var(--x, 50%) var(--y, 50%),
+    rgba(109, 76, 255, 0.12),
+    transparent 100%
+  );
+}
+
+body {
+  background: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  position:relative;
+  width: 100%;
+  background: linear-gradient(to bottom, #000, #050505);
+}
+.navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+}
+
+.nav-inner {
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 15px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+}
+
+/* Animated underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== Resume button ===== */
+
+.nav-links .resume {
+  padding: 14px 22px;
+  border-radius: 6px;
+  background: #6d4cff;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  overflow: hidden;
+}
+
+/* Remove underline animation for the button */
+.nav-links .resume::after {
+  display: none;
+}
+/* View button */
+.view-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Experience Section ===== */
+
+.experience {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 120px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+/* Individual experience wrapper */
+.experience-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Media card */
+.experience-media {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  max-height: 900px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* GIF / image */
+.experience-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Hover overlay */
+.experience-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover */
+.experience-media:hover .experience-overlay {
+  opacity: 1;
+}
+
+
+
+/* Bottom-left text */
+.experience-meta {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+.experience-meta .title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.experience-meta .company {
+  font-size: 14px;
+  opacity: 0.7;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* ===== Projects Page ===== */
+
+.projects {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 32px;
+}
+
+.projects-heading {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 80px;
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* Card */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #000;
+}
+
+/* Video */
+.project-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay */
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+
+/* Always-visible project title */
+.project-title-static {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #fff;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+/* Reuse existing view button */
+.project-overlay .view-btn {
+  margin-top: 150px;
+}
+
+/* ===== Project Detail Page ===== */
+
+.project-meta {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 32px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meta-label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.meta-value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Hero video */
+.project-hero {
+  max-width: 1800px;
+  margin: 80px auto;
+  padding: 0 32px;
+}
+
+.project-hero video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Description */
+.project-description {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 32px;
+}
+
+.project-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Gallery */
+.project-gallery {
+  max-width: 1600px;
+  margin: 120px auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.project-gallery video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+
+
+

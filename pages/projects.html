@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="logo">Aleksey Yereshchenko</div>
+
+      <nav class="nav-links">
+        <a href="/#experience">Experience</a>
+        <a href="/projects.html" target="_blank">Projects</a>
+        <a href="/#about">About</a>
+        <a href="/AlekseyY_Resume.pdf" target="_blank" class="resume">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h1 class="projects-heading">Projects</h1>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <video
+          src="/gifs/Changeling.mp4"
+          poster = "pldresize.jpg"
+          muted
+          playsinline
+          preload="none"
+        ></video>
+
+        <div class = "project-title-static"> Project Jedi</div>
+        <div class="project-overlay">
+          <a href="/project-jedi.html" target="_blank" class="view-btn">View</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <video
+          src="/gifs/Cataria.mp4"
+          muted
+          playsinline
+          preload="none"
+        ></video>
+
+        <div class = "project-title-static"> PROJECT SNet
+        </div>
+        <div class="project-overlay">
+          <button class="view-btn">View</button>
+        </div>
+      </div>
+
+      <!-- Add more project-card blocks -->
+    </div>
+  </section>
+
+  <!-- Hover play logic -->
+  <script>
+  document.querySelectorAll('.project-card').forEach(card => {
+    const video = card.querySelector('video');
+    const src = video.getAttribute('src');
+
+    card.addEventListener('mouseenter', () => {
+      video.play();
+    });
+
+    card.addEventListener('mouseleave', () => {
+      video.pause();
+      video.removeAttribute('src');
+      video.load();              // reset video
+      video.setAttribute('src', src);
+    });
+  });
+</script>
+
+
+</body>
+</html>

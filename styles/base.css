@@ -1,0 +1,130 @@
+/* Reset / base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.cursor-light {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background: radial-gradient(
+    600px at var(--x, 50%) var(--y, 50%),
+    rgba(109, 76, 255, 0.12),
+    transparent 100%
+  );
+}
+
+body {
+  background: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  position:relative;
+  width: 100%;
+  background: linear-gradient(to bottom, #000, #050505);
+}
+.navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+}
+
+.nav-inner {
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 15px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+}
+
+/* Animated underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== Resume button ===== */
+
+.nav-links .resume {
+  padding: 14px 22px;
+  border-radius: 6px;
+  background: #6d4cff;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  overflow: hidden;
+}
+
+/* Remove underline animation for the button */
+.nav-links .resume::after {
+  display: none;
+}
+
+/* View button */
+.view-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

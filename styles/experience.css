@@ -1,0 +1,76 @@
+/* ===== Experience Section ===== */
+
+.experience {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 120px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+/* Individual experience wrapper */
+.experience-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Media card */
+.experience-media {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  max-height: 900px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* GIF / image */
+.experience-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Hover overlay */
+.experience-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover */
+.experience-media:hover .experience-overlay {
+  opacity: 1;
+}
+
+
+
+/* Bottom-left text */
+.experience-meta {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+.experience-meta .title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.experience-meta .company {
+  font-size: 14px;
+  opacity: 0.7;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

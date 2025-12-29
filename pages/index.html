@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-light"></div>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="logo">Aleksey Yereshchenko</div>
+
+      <nav class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="/projects.html">Projects</a>
+        <a href="#about">About</a>
+       <a href="/AlekseyY_Resume.pdf" target="_blank" class="resume">Resume</a>
+      </nav>
+    </div>
+  </header>
+  <section class="experience">
+  <div class="experience-item">
+    <div class="experience-media">
+      <video
+  src="/gifs/Cataria.mp4"
+  autoplay
+  loop
+  muted
+  playsinline
+></video>
+      <div class="experience-overlay">
+        <button class="view-btn">View</button>
+      </div>
+      <div class="experience-meta">
+        <span class="title">Gameplay Programmer - Contract</span>
+        <span class="company">Third Pie Studios</span>
+      </div>
+    </div>
+  </div>
+
+<div class="experience-item">
+    <div class="experience-media">
+      <video
+  src="/gifs/Changeling.mp4"
+  autoplay
+  loop
+  muted
+  playsinline
+></video>
+      <div class="experience-overlay">
+        <button class="view-btn">View</button>
+      </div>
+      <div class="experience-meta">
+        <span class="title">Game Developer - Internship</span>
+        <span class="company">Xana Ad Hoc Studio - RIT</span>
+      </div>
+    </div>
+  </div>
+  <!-- Duplicate for more experiences -->
+</section>
+<script>
+  const light = document.querySelector('.cursor-light');
+
+  window.addEventListener('mousemove', (e) => {
+    const x = e.clientX + 'px';
+    const y = e.clientY + 'px';
+
+    light.style.setProperty('--x', x);
+    light.style.setProperty('--y', y);
+  });
+</script>
+
+</body>
+</html>
