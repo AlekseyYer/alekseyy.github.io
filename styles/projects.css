@@ -4,6 +4,9 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 120px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
 }
 
 .projects-heading {

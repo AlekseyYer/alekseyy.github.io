@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="/styles/main.css" />
 </head>
 <body>
-
+   <div class="cursor-light"></div>
   <!-- Navbar -->
   <header class="navbar">
     <div class="nav-inner">
@@ -23,8 +23,7 @@
 
   <!-- Projects -->
   <section class="projects">
-    <h1 class="projects-heading">PROJECTS</h1>
-
+    <h1 class="outline-heading">Projects</h1>
     <div class="projects-grid">
 
       <div class="project-card">
@@ -79,7 +78,17 @@
     });
   });
 </script>
+<script>
+  const light = document.querySelector('.cursor-light');
 
+  window.addEventListener('mousemove', (e) => {
+    const x = e.clientX + 'px';
+    const y = e.clientY + 'px';
+
+    light.style.setProperty('--x', x);
+    light.style.setProperty('--y', y);
+  });
+</script>
 
 </body>
 </html>
