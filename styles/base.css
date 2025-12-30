@@ -25,7 +25,7 @@
   z-index: 0;
 
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
-  opacity: .5;
+  opacity: .7;
 }
 
 
@@ -44,8 +44,8 @@ body::before {
   background:
     repeating-linear-gradient(
       45deg,
-      rgba(255,255,255,0.025),
-      rgba(255,255,255,0.025) 1px,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.03) 1px,
       transparent 1px,
       transparent 6px
     );
@@ -122,29 +122,66 @@ body::before {
   width: 100%;
 }
 
-/* ===== Resume button ===== */
+/* ===== Resume Button ===== */
 
 .nav-links .resume {
-  padding: 10px 20px;
-  border-radius: 4px;
+  position: relative;
+  padding: 14px 22px;
+  border-radius: 6px;
   background: #6d4cff;
   color: #fff;
   font-weight: 600;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
   overflow: hidden;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-/* Remove underline animation for the button */
+/* Subtle lift */
+.nav-links .resume:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(109, 76, 255, 0.35);
+}
+
+/* Sheen */
+.nav-links .resume::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transition: transform 0.6s ease;
+}
+
+/* Sweep on hover */
+.nav-links .resume:hover::before {
+  transform: translateX(250%);
+}
+
+/* Remove underline animation */
 .nav-links .resume::after {
   display: none;
 }
+
+
 
 /* View button */
 .view-btn {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
-  padding: 14px 28px;
+  padding: 16px 48px;
   border-radius: 999px;
   font-size: 12px;
   letter-spacing: 0.12em;
@@ -152,6 +189,7 @@ body::before {
   cursor: pointer;
   backdrop-filter: blur(6px);
   transition: background 0.3s ease;
+  text-decoration: none;
 }
 
 .view-btn:hover {

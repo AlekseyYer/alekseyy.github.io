@@ -30,6 +30,7 @@
   border-radius: 12px;
   cursor: pointer;
   background: #000;
+  aspect-ratio: 16/9;
 }
 
 /* Video */
@@ -39,6 +40,7 @@
   object-fit: cover;
   display: block;
 }
+
 
 /* Overlay */
 .project-overlay {
