@@ -55,27 +55,43 @@
 
   <!-- Description -->
   <section class="project-description">
+    
+    
     <p>
       At Third Pie Studios, I was contracted to help bring <i>Ages of Cataria</i>, an indie village simulation game made in <b>Unreal Engine 5</b>, to a publishable Early Access state.
       My responsibilities included identifying and fixing bugs, implementing UI, programming in <b>Blueprints</b>, and collaborating with a small, fully remote team of programmers, writers, 3D artists, and a music editor. Through this opportunity, I was fortunate to make several key contributions that expanded my technical skill set.
     </p>
-    
+    <div class = "text-gallery">
+    <div class="text-card">
+      <h3>Seasons Update</h3>
     <p>
       One notable feature I took initiative on building was the <i>Seasons Update</i>. Prior to this work, I had limited experience with Unreal Engine's material and shader systems; however, through an iterative process, I built a performant system that changes in-game seasons. To make this work, I utilized Unreal's 
       <b>Material Parameter Collection (MPC) </b> tool, as well as <b>Dynamic Material Instances</b>. Additionally, I used the <b>Material Graph</b> to swap textures via a scalar parameter in an <b>MPC</b>. I created several new <b>Niagara VFX</b> as well, including <i>wind, snow, leaves, and emissive particles</i>. Together, these systems allow thousands of Blueprint actors, landscapes, foliage, and static meshes to transition between seasons at runtime with <i>no measurable performance impact</i>.
     </p>
-
+    </div>
+    <div class="text-card">
+      <h3>Music System</h3>
     <p> 
      I also took the lead on implementing a music system that plays randomized day and night tracks based on the current time-of-day cycle and active season. While selecting a random track for just the current cycle was straightforward, I had to refactor the system to account for season-specific music. To do this, I used a <b>struct</b> that contains a cycle integer
      and an array of associated sound assets. I then utilized a <b>Primary Data Asset Blueprint</b> to map a <i>season enum</i> to a corresponding array of the aforementioned struct. Seperate data assets for each season were created, allowing season-specific tracks to be assigned to certain cycles. Because of this <i>data driven</i>
+     </p>
+    </div>
+    <div class="text-card">
+      <h3>Scene Capture System</h3>
     <p>
       Another significant contribution involved refactoring and optimizing an <i>existing villager portrait capture system</i>. The original approach relied on per-actor scene capture cameras, which did not scale well and frequently produced inconsistent results due to world occlusion and uncontrolled lighting conditions.
       I redesigned the system around a centralized <b>photobooth actor</b> equipped with a single scene capture camera, controlled lightning, and a mannequin. <b>Portrait requests are processed through a queue</b>, allowing villagers to be handled sequentially. Each villager's mesh and materials are applied to the mannequin, the capture is performed, and the system advances to the next request. As a result, the system became more performant and ensured consistent visual output.
     </p>
-
+    
+  </div>
+  <div class="text-card">
+      <h3>Scene Capture System</h3>
     <p>
-
+      Another significant contribution involved refactoring and optimizing an <i>existing villager portrait capture system</i>. The original approach relied on per-actor scene capture cameras, which did not scale well and frequently produced inconsistent results due to world occlusion and uncontrolled lighting conditions.
+      I redesigned the system around a centralized <b>photobooth actor</b> equipped with a single scene capture camera, controlled lightning, and a mannequin. <b>Portrait requests are processed through a queue</b>, allowing villagers to be handled sequentially. Each villager's mesh and materials are applied to the mannequin, the capture is performed, and the system advances to the next request. As a result, the system became more performant and ensured consistent visual output.
     </p>
+    
+  </div>
   </section>
 
   <!-- Gallery -->
