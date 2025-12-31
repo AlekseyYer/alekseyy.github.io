@@ -42,7 +42,7 @@
 
 /* Description */
 .project-description {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 80px auto;
   padding: 0 32px;
 }
@@ -51,6 +51,7 @@
   font-size: 18px;
   line-height: 1.6;
   opacity: 0.9;
+  margin-bottom: 12px;
 }
 
 /* Gallery */
@@ -68,6 +69,9 @@
   border-radius: 12px;
   display: block;
   object-fit: cover;
+  aspect-ratio: 16/9;
+  z-index: 0;
+
 }
 
 .project-gallery img {
@@ -75,4 +79,6 @@
   border-radius: 12px;
   display: block;
   object-fit: cover;
+  z-index: 0;
+  aspect-ratio: 16/9;
 }
