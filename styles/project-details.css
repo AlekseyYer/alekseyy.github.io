@@ -40,6 +40,16 @@
   object-fit: cover;
 }
 
+.project-overview-heading {
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: .9;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
 /* Description */
 .project-description {
   max-width: 1800px;
@@ -49,9 +59,9 @@
 
 .project-description p {
   font-size: 19px;
-  line-height: 1.6;
+  line-height: 2;
   opacity: 0.9;
-  margin-bottom: 12px;
+
 }
 
 /* Gallery */
@@ -84,14 +94,14 @@
 }
 
 .text-gallery {
-  margin-top: 48px;
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 56px;
 }
 
 .text-card h3 {
-  font-size: 14px;
+  font-size: 42px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -101,6 +111,11 @@
 
 .text-card p {
   font-size: 19px;
-  line-height: 1.6;
+  line-height: 2;
+  opacity: 0.9;
+}
+
+.text-card:first-child h3,
+.text-card:nth-child(2) h3 {
   opacity: 0.9;
 }
