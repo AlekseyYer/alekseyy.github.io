@@ -23,7 +23,7 @@
 /* Signature */
 .about-signature {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0px auto;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -36,6 +36,7 @@
   object-fit: cover;
   z-index: 0;
   object-position: center 35%;
+  
 }
 
 .signature-text {

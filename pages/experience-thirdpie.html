@@ -65,6 +65,12 @@
     <div class = "text-gallery">
     <div class="text-card">
       <h3>Seasons Update</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+      Run-time seasonal transitions across thousands of actors with no measurable performance cost
+    </span>
+  </div>
     <p>
       One notable feature I took initiative on building was the <i>Seasons Update</i>. Prior to this work, I had limited experience with Unreal Engine's material and shader systems; however, through an iterative process, I built a performant system that changes in-game seasons. To make this work, I utilized Unreal's 
       <b>Material Parameter Collection (MPC) </b> tool, as well as <b>Dynamic Material Instances</b>. Additionally, I used the <b>Material Graph</b> to swap textures via a scalar parameter in an <b>MPC</b>. I created several new <b>Niagara VFX</b> as well, including <i>wind, snow, leaves, and emissive particles</i>. Together, these systems allow thousands of Blueprint actors, landscapes, foliage, and static meshes to transition between seasons at runtime with <i>no measurable performance impact</i>.
@@ -72,13 +78,29 @@
     </div>
     <div class="text-card">
       <h3>Music System</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+      Data-driven music system supporting randomized day/night tracks with support for seasonal variations.
+    </span>
+  </div>
     <p> 
      I also took the lead on implementing a music system that plays randomized day and night tracks based on the current time-of-day cycle and active season. While selecting a random track for just the current cycle was straightforward, I had to refactor the system to account for season-specific music. To do this, I used a <b>struct</b> that contains a cycle integer
      and an array of associated sound assets. I then utilized a <b>Primary Data Asset Blueprint</b> to map a <i>season enum</i> to a corresponding array of the aforementioned struct. Seperate data assets for each season were created, allowing season-specific tracks to be assigned to certain cycles. Because of this <i>data driven</i> approach, the system is scalable and allows for music variations without code changes.
      </p>
     </div>
-    <div class="text-card">
-      <h3>Scene Capture System</h3>
+    
+  
+  
+
+   <div class="text-card">
+      <h3>Portrait Capture System</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+       Eliminated inconsistent portrait renders caused by occlusion and lighting with a queue system.
+    </span>
+  </div>
     <p>
       Another significant contribution involved refactoring and optimizing an <i>existing villager portrait capture system</i>. The original approach relied on per-actor scene capture cameras, which did not scale well and frequently produced inconsistent results due to world occlusion and uncontrolled lighting conditions.
       I redesigned the system around a centralized <b>photobooth actor</b> equipped with a single scene capture camera, controlled lightning, and a mannequin. <b>Portrait requests are processed through a queue</b>, allowing villagers to be handled sequentially. Each villager's mesh and materials are applied to the mannequin, the capture is performed, and the system advances to the next request. As a result, the system became more performant and ensured consistent visual output.
@@ -86,13 +108,19 @@
     
   </div>
   <div class="text-card">
-      <h3>Scene Capture System</h3>
+      <h3>Settings And Save/Load System</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+       Full settings menu with graphics, resolution, frame rate, and key mapping, including save/load support.
+    </span>
+  </div>
     <p>
-      Another significant contribution involved refactoring and optimizing an <i>existing villager portrait capture system</i>. The original approach relied on per-actor scene capture cameras, which did not scale well and frequently produced inconsistent results due to world occlusion and uncontrolled lighting conditions.
-      I redesigned the system around a centralized <b>photobooth actor</b> equipped with a single scene capture camera, controlled lightning, and a mannequin. <b>Portrait requests are processed through a queue</b>, allowing villagers to be handled sequentially. Each villager's mesh and materials are applied to the mannequin, the capture is performed, and the system advances to the next request. As a result, the system became more performant and ensured consistent visual output.
+      In addition, I built a settings menu and the <b>save/load functionality</b> for it. This included display options such as resolution, window mode, graphics presets, frame rate limits, as well as <b>key mappings</b>. Audio controls were implemented using Unreal's <b>Sound Classes and Mixes</b> to manage music, sound effects, and ambient audio.
     </p>
     
   </div>
+</div>
   </section>
 
   <!-- Gallery -->

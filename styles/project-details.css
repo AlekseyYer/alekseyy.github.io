@@ -31,6 +31,7 @@
   max-width: 1800px;
   margin: 80px auto;
   padding: 0 32px;
+  position: relative;
 }
 
 .project-hero video {
@@ -58,7 +59,7 @@
 }
 
 .project-description p {
-  font-size: 19px;
+  font-size: 24px;
   line-height: 2;
   opacity: 0.9;
 
@@ -95,9 +96,13 @@
 
 .text-gallery {
   margin-top: 100px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.text-card{
+  padding-bottom:32px;
 }
 
 .text-card h3 {
@@ -105,12 +110,46 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   opacity: 0.75;
+  text-align: center;
 }
 
+.impact-bar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+
+  align-items: baseline; /* ← THIS fixes vertical drift */
+
+  padding: 16px 20px;
+  margin: 20px 0 28px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+
+.impact-label {
+  font-size: 24px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  line-height: 1;       
+  white-space: nowrap;
+}
+
+
+.impact-text {
+  font-size: 24px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+
 .text-card p {
-  font-size: 19px;
+  font-size: 21px;
   line-height: 2;
   opacity: 0.9;
 }
@@ -119,3 +158,31 @@
 .text-card:nth-child(2) h3 {
   opacity: 0.9;
 }
+
+/* ===== Project Description Lists ===== */
+.project-description ul {
+  margin: 24px 0 32px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.project-description li {
+  position: relative;
+  margin-bottom: 6px;
+  font-size: 20px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* Custom bullet */
+.project-description li::before {
+  content: "-";
+  position: absolute;
+  left: -20px;
+  opacity: 0.5;
+}
+
+
+
+
+

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Project Jedi</title>
-  <link rel="stylesheet" href="/styles/main.css" />
+  <title>Project SNet</title>
+  <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
 
@@ -19,28 +19,28 @@
         <a href="/pages/index.html">Experience</a>
         <a href="/pages/projects.html">Projects</a>
         <a href="/pages/about.html">About</a>
-        <a href="/AlekseyY_Resume.pdf" class="resume">Resume</a>
+        <a href="/AlekseyY_Resume.pdf" target="_blank" class="resume">Resume</a>
       </nav>
     </div>
   </header>
 
-  <!-- Project meta -->
+  <!-- Meta -->
   <section class="project-meta">
     <div class="meta-item">
       <span class="meta-label">Role</span>
       <span class="meta-value">Solo Developer</span>
     </div>
-
+    
     <div class="meta-item">
       <span class="meta-label">Timeline</span>
-      <span class="meta-value">Work In Progress</span>
+      <span class="meta-value">1 month</span>
     </div>
   </section>
 
   <!-- Hero video -->
   <section class="project-hero">
     <video
-      src="/gifs/Changeling.mp4"
+      src="/gifs/ProjectSnet.mp4"
       autoplay
       loop
       muted
@@ -50,50 +50,101 @@
 
   <!-- Description -->
   <section class="project-description">
+    
+    <h2 class="project-overview-heading">Overview</h2>
+
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ut quod repellat repudiandae delectus quis nisi vero nemo rem iusto, non quia reprehenderit sequi officia consectetur ipsum nobis, perferendis porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quia facilis obcaecati iste quisquam mollitia quis nostrum ratione quas nihil eveniet expedita iure alias veritatis corrupti neque quos, culpa tempore.
+     Project SNet is a multiplayer wave-based action prototype built in <b>Unreal Engine 5</b>, designed to teach me the foundations of the <b>Gameplay Ability System</b> and Unreal <b>networking</b>. This personal project was implemented primarily 
+     in <b>C++</b> and <b>Blueprints</b> and supports multiple online players.
     </p>
-  </section>
-
-  <!-- Video gallery -->
-  <section class="project-gallery">
-    <video src="/gifs/Changeling.mp4" autoplay loop muted playsinline></video>
-    <video src="/gifs/Changeling.mp4" autoplay loop muted playsinline></video>
-    <video src="/gifs/Changeling.mp4" autoplay loop muted playsinline></video>
-    <video src="/gifs/Changeling.mp4" autoplay loop muted playsinline></video>
-  </section>
-<footer class="site-footer">
-  <div class="footer-inner">
-
-    <nav class="footer-links">
-      <a href="/pages/index.html">Experience</a>
-      <a href="/pages/projects.html">Projects</a>
-      <a href="/pages/about.html">About</a>
-    </nav>
-
-    <div class="footer-social">
-      <a
-        href="https://www.linkedin.com/in/alekseyyer/"
-        target="_blank"
-        aria-label="LinkedIn"
-        class="social-btn"
-      >
-        in
-      </a>
+    <div class = "text-gallery">
+    <div class="text-card">
+      <h3>Multiplayer</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+    
+  </div>
+    <p>
+    
+    </p>
     </div>
 
+
+    <div class="text-card">
+      <h3>Gameplay Abilities</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+     
   </div>
-</footer>
-<script>
-  const light = document.querySelector('.cursor-light');
+    <p>
+    
+    </p>
+    </div>
 
-  window.addEventListener('mousemove', (e) => {
-    const x = e.clientX + 'px';
-    const y = e.clientY + 'px';
+    <div class="text-card">
+      <h3>Enemy AI</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+     
+  </div>
+    <p>
+    
+    </p>
+    </div>
 
-    light.style.setProperty('--x', x);
-    light.style.setProperty('--y', y);
-  });
-</script>
+    <div class="text-card">
+      <h3>UI</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+     
+  </div>
+    <p>
+    
+    </p>
+    </div>
+   
+</div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="project-gallery">
+    <img src = "/posters/snetbehaviortree.png"/>
+    <img src = "/posters/snetsteamfriends.png"/>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-links">
+        <a href="/pages/index.html">Experience</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/about.html">About</a>
+      </nav>
+
+      <div class="footer-social">
+        <a
+          href="https://www.linkedin.com/in/alekseyyer/"
+          target="_blank"
+          class="social-btn"
+        >
+          in
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const light = document.querySelector('.cursor-light');
+    window.addEventListener('mousemove', (e) => {
+      light.style.setProperty('--x', e.clientX + 'px');
+      light.style.setProperty('--y', e.clientY + 'px');
+    });
+  </script>
+
 </body>
 </html>

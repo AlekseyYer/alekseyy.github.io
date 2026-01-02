@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Project Pathfinder</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+  <div class="cursor-light"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="logo">Aleksey Yereshchenko</div>
+
+      <nav class="nav-links">
+        <a href="/pages/index.html">Experience</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/AlekseyY_Resume.pdf" target="_blank" class="resume">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Meta -->
+  <section class="project-meta">
+    <div class="meta-item">
+      <span class="meta-label">Role</span>
+      <span class="meta-value">Solo Developer</span>
+    </div>
+    
+    <div class="meta-item">
+      <span class="meta-label">Timeline</span>
+      <span class="meta-value">1 month</span>
+    </div>
+  </section>
+
+  <!-- Hero video -->
+  <section class="project-hero">
+    <video
+      src="/gifs/pathfinding.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
+  </section>
+
+  <!-- Description -->
+  <section class="project-description">
+    
+    <h2 class="project-overview-heading">Overview</h2>
+
+    <p>
+     Project Pathfinder is a custom implementation of the A* pathfinding algorithm in <b>Unreal Engine 5</b>. Coded in <b>C++</b>, it features an interactive hexagonal grid system and movement calculations. The purpose of this project was to strengthen my <b>data structures and algorithms</b> skills. Furthermore, I created detailed documentation explaining
+     the code and role of each class.
+    </p>
+    <div class = "text-gallery">
+    <div class="text-card">
+      <h3>Hexagonal Grid System</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+    Generates a dynamic hex grid with movement weights and neighbor references using a hash map for fast lookups.
+  </div>
+    <p>
+    The first challenge in this personal project was to create a hexagonal grid that could efficiently render large numbers of hex tiles. To do this, I used an <b>instanced static mesh component</b>b, with each instance mapping its index to a Grid Node object. Each grid node stores information such as:
+    <ul>
+    <li>its coordinates on the grid</li>
+    <li>the node's world position</li>
+    <li>the node's movement cost</li>
+    <li>whether or not the node is an obstacle</li>
+    <li>and references to the node's neighbors.</li>
+    </ul> 
+    <p>A hash map then links the instance index to its grid node, which later allows for pathfinding and interaction.</p>
+    </p>
+    </div>
+
+
+    <div class="text-card">
+      <h3>A* Pathfinding</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+     
+  </div>
+    <p>
+    
+    
+    
+    </p>
+    </div>
+
+    <div class="text-card">
+      <h3>Interactivity</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+     
+  </div>
+    <p>
+    
+    </p>
+    </div>
+
+    <div class="text-card">
+      <h3>UI</h3>
+      <div class="impact-bar">
+    <span class="impact-label">Impact</span>
+    <span class="impact-text">
+     
+  </div>
+    <p>
+    
+    </p>
+    </div>
+   
+</div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="project-gallery">
+    <img src = "/posters/pathfindercode.png"/>
+    <img src = "/posters/pathfindercode2.png"/>
+    <img src = "/posters/pathfindercode3.png"/>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-links">
+        <a href="/pages/index.html">Experience</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/about.html">About</a>
+      </nav>
+
+      <div class="footer-social">
+        <a
+          href="https://www.linkedin.com/in/alekseyyer/"
+          target="_blank"
+          class="social-btn"
+        >
+          in
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const light = document.querySelector('.cursor-light');
+    window.addEventListener('mousemove', (e) => {
+      light.style.setProperty('--x', e.clientX + 'px');
+      light.style.setProperty('--y', e.clientY + 'px');
+    });
+  </script>
+
+</body>
+</html>
