@@ -120,7 +120,7 @@
   grid-template-columns: auto 1fr;
   gap: 16px;
 
-  align-items: baseline; /* ← THIS fixes vertical drift */
+  align-items: baseline; 
 
   padding: 16px 20px;
   margin: 20px 0 28px;
@@ -180,6 +180,37 @@
   position: absolute;
   left: -20px;
   opacity: 0.5;
+}
+
+/* ===== Inline Text Links  ===== */
+
+.text-link {
+  position: relative;
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+
+  /* NEW */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Animated underline */
+.text-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.text-link:hover::after {
+  width: 100%;
 }
 
 

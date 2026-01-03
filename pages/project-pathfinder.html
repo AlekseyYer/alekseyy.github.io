@@ -33,7 +33,12 @@
     
     <div class="meta-item">
       <span class="meta-label">Timeline</span>
-      <span class="meta-value">1 month</span>
+      <span class="meta-value">Spring 2025</span>
+    </div>
+
+    <div class="meta-item">
+      <span class="meta-label">Skills</span>
+      <span class="meta-value">C++, Unreal Engine 5, Data Structures & Algorithms</span>
     </div>
   </section>
 
@@ -66,7 +71,8 @@
     Generates a dynamic hex grid with movement weights and neighbor references using a hash map for fast lookups.
   </div>
     <p>
-    The first challenge in this personal project was to create a hexagonal grid that could efficiently render large numbers of hex tiles. To do this, I used an <b>instanced static mesh component</b>b, with each instance mapping its index to a Grid Node object. Each grid node stores information such as:
+    The first challenge in this personal project was to create a hexagonal grid that could efficiently render large numbers of hex tiles. 
+    To do this, I used an <b>instanced static mesh component</b>. Each grid tile is placed in offset rows to create the hexagonal layout, and is mapped onto a Grid Node object using a <b>hash map</b>. These nodes support the pathfinding algorithm by storing information such as:
     <ul>
     <li>its coordinates on the grid</li>
     <li>the node's world position</li>
@@ -74,7 +80,7 @@
     <li>whether or not the node is an obstacle</li>
     <li>and references to the node's neighbors.</li>
     </ul> 
-    <p>A hash map then links the instance index to its grid node, which later allows for pathfinding and interaction.</p>
+    <p>Once all tiles are placed, the grid builds neighbor relationshup by checking adjacent coordinates.</p>
     </p>
     </div>
 
@@ -84,12 +90,12 @@
       <div class="impact-bar">
     <span class="impact-label">Impact</span>
     <span class="impact-text">
-     
+     Implented A* pathfinding with obstacle avoidance, weighted movement cost, and path reconstruction.
   </div>
     <p>
-    
-    
-    
+     The pathfinding system uses a <b>TArray</b> as the open set to store candidate nodes that still need to be evaluated. A <b>TSet</b> is used as the closed set to track nodes that have already been processed 
+     and should not be revisited. Each node stores the traversal cost, the heuristic cost, and a parent reference to the previous node. During execution, the algorithm repeatedly selects the lowest-cost node from the open set
+     , evaluates its neighbors, and updates their costs when a cheaper path is found. Once the goal node is reached, the final path is reconstructed by following parent points back to the start.
     </p>
     </div>
 
@@ -98,22 +104,31 @@
       <div class="impact-bar">
     <span class="impact-label">Impact</span>
     <span class="impact-text">
-     
+     User can randomize the grid, designate start/goal nodes, toggle obstacles, and change the size of the grid.
   </div>
     <p>
-    
+    A custom player controller handles all grid interaction, allowing players to designate start and goal nodes with left-clicks and toggle obstacles, using right-clicks. The controller
+    performs raycasts against the instanced mesh to identify the node instance. Any change to the grid triggers a path recalculation. Through a simple UI menu, the player can 
+    also randomize the grid and change its size.
     </p>
     </div>
 
     <div class="text-card">
-      <h3>UI</h3>
+      <h3>Documentation</h3>
       <div class="impact-bar">
     <span class="impact-label">Impact</span>
     <span class="impact-text">
-     
+    Each class and line of code is explained in a Google Doc to serve as a future reference, and code is publically available on GitHub.
   </div>
     <p>
-    
+      <ul>
+        <li><a href="https://docs.google.com/document/d/1ypIOJqeh1VKaEIOfggD_P2NYcQgoUshLqf0kT2SLth8/edit?usp=sharing" class="text-link" target="_blank">
+    Google Doc
+  </a></li>
+        <li><a href="https://github.com/AlekseyYer/PathfindingProject" class="text-link" target="_blank">
+    GitHub
+  </a></li>
+      </ul>
     </p>
     </div>
    
@@ -125,6 +140,7 @@
     <img src = "/posters/pathfindercode.png"/>
     <img src = "/posters/pathfindercode2.png"/>
     <img src = "/posters/pathfindercode3.png"/>
+    <img src = "/posters/pathfindercode4.png"/>
     
   </section>
 
